@@ -1,0 +1,18 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "Automating web pages using playwright",
+  "main": "index.js",
+  "scripts": {
+    "tests:chrome": "playwright test --config=playwright.config.ts --project=chromium",
+    "tests:firefox": "playwright test --config=playwright.config.ts --project=firefox",
+    "tests:webkit": "playwright test --config=playwright.config.ts --project=webkit",
+    "tests:e2e": "playwright test --config=e2e.config.ts --project=chromium"
+  },
+  "author": "Ramsha warsi",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.20.1",
+    "prettier": "^2.6.1"
+  }
+}
