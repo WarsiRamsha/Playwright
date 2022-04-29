@@ -34,6 +34,6 @@ test.describe('Feedback Form', () => {
     await page.click("input[type='submit']")
     const feedbackReceived = await page.locator('h3')
     await expect(feedbackReceived).toBeVisible() //Two assertions to revise the concept
-    await expect(feedbackReceived).toContainText('Feedback FAIL')
+    await expect(feedbackReceived).toContainText('Feedback')
   })
 })
