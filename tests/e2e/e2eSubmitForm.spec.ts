@@ -35,5 +35,7 @@ test.describe('Feedback Form', () => {
     const feedbackReceived = await page.locator('h3')
     await expect(feedbackReceived).toBeVisible() //Two assertions to revise the concept
     await expect(feedbackReceived).toContainText('Feedback')
+    // Another way of asserting this is using
+    await page.waitForSelector('#feedback-title')
   })
 })

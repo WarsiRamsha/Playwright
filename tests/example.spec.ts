@@ -73,7 +73,7 @@ test.describe('My first Test Suite', () => {
   })
 })
 
-test.describe.parallel.only('Before and after hooks', () => {
+test.describe('Before and after hooks', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('https://example.com/')
   })
