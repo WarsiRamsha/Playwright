@@ -4,6 +4,7 @@ const config: PlaywrightTestConfig =
   {
     timeout: 60000,
     retries: 0, //it should be small number as it effects the test execution time.
+    testDir: 'tests/tips',
     //Greater the retries greater will be the time for test execution
     use: {
       //browser specific actions
