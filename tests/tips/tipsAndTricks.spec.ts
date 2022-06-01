@@ -20,14 +20,14 @@ test.describe('Tips And Tricks', () => {
     )
     await page.goto('https://example.com/')
   })
-  /*test('Parameterized', async ({ page, browserName }) => {
+  test('Parameterized', async ({ page, browserName }) => {
     await page.goto('https/example.com/')
   })
   const people = ['Ross', 'Rachel', 'Phoebe', 'Joey', 'Gunther'] //not working. need assistance
-  for (const name of people) {
-    test('Parameterized Testing ${name}', async ({ page }) => {
+  /*for (const name of people) {
+    test(`Parameterized Testing ${name}`, async ({ page }) => {
       await page.goto('http://zero.webappsecurity.com/index.html')
-      await page.click('#searchTerm', '{name}')
+      await page.click('#searchTerm', `${name}`)
       await page.waitForTimeout(3000)
     })
   }*/
