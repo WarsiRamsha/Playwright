@@ -21,7 +21,7 @@ test.describe.only('Digital Automation Hub', () => {
     const errorMessage = await page.locator(
       '.ant-form-item-explain' //.ant-form-item-control-input-conten
     )
-    await expect(errorMessage).toBe('email is required!')
+    await expect(errorMessage).toBe('password! is required!')
   })
   test('Login Form --Positive Scenario', async ({ page }) => {
     await page.goto('https://dah-web-dev.azurewebsites.net/login')

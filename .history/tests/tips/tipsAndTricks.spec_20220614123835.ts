@@ -16,19 +16,15 @@ test.describe.only('Digital Automation Hub', () => {
     page,
   }) => {
     await page.goto('https://dah-web-dev.azurewebsites.net/login')
-    //await page.click('type='submit'')
-    await page.locator('text= Login ').click()
-    const errorMessage = await page.locator(
-      '.ant-form-item-explain' //.ant-form-item-control-input-conten
-    )
-    await expect(errorMessage).toBe('email is required!')
+    await page.click('.ant-row ant-form-item')
+    const errorMessage = await page.locator('.ant-form-item-control-input')
+    await expect(errorMessage).toContainText('email is required!')
   })
   test('Login Form --Positive Scenario', async ({ page }) => {
     await page.goto('https://dah-web-dev.azurewebsites.net/login')
     await page.type('#login_email', 'rwa@ciklum.com') //Targeting with ID
     await page.type('#login_password', 'December2021!')
-    await page.locator('text= Login ').click() //Spaces before and after the text
-    //await page.click('.ant-row ant-form-item') //Targetting with class as there is no ID used.
+    await page.click('.ant-row ant-form-item') //Targetting with class as there is no ID used.
   })
 })
 test.describe('Digital Automation Hub', () => {
@@ -42,19 +38,8 @@ test.describe('Digital Automation Hub', () => {
 })
 /*test.describe.only('Digital Automation Hub', () => {
   test('To Verify that user is able to click Forgot password as per his/her wish', async ({
-    page
+    page,
   }) => {
     await page.goto('https://dah-web-dev.azurewebsites.net/user-management')
   })
 })*/
-test.describe('Digital Automation Hub', () => {
-  test('To Verify that user is able to click Forgot password as per his/her wish', async ({
-    page,
-  }) => {
-    await page.goto('https://dah-web-dev.azurewebsites.net/login')
-    await page.waitForTimeout(5000)
-    await page.locator('.login-form-forgot half-field text-right').click()
-    await page.pause()
-    //.login-form-forgot half-field text-right
-  })
-})

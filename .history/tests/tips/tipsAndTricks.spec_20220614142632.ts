@@ -19,7 +19,7 @@ test.describe.only('Digital Automation Hub', () => {
     //await page.click('type='submit'')
     await page.locator('text= Login ').click()
     const errorMessage = await page.locator(
-      '.ant-form-item-explain' //.ant-form-item-control-input-conten
+      '.ant-form-item-control-input-content'
     )
     await expect(errorMessage).toBe('email is required!')
   })
